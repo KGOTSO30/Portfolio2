@@ -11,6 +11,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProjectCardComponent } from "./project-card/project-card.component";
 
 @NgModule({
   declarations: [
@@ -23,11 +24,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ResumeComponent
   ],
   imports: [
-   
     BrowserModule,
     AppRoutingModule,
-    NgbModule
-  ],
+    NgbModule,
+    ProjectCardComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })
