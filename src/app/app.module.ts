@@ -10,8 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCardComponent } from "./project-card/project-card.component";
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +24,20 @@ import { ProjectCardComponent } from "./project-card/project-card.component";
     HomeComponent,
     PortfolioComponent,
     ContactComponent,
-    ResumeComponent
+    ResumeComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ProjectCardComponent
+    ProjectCardComponent,
+    NgbModalModule,
+    NgbCarouselModule
+    
 ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
