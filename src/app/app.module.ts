@@ -14,7 +14,9 @@ import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCardComponent } from "./project-card/project-card.component";
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import {ModalModule} from 'ngx-bootstrap/modal';
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
     NgbModule,
     ProjectCardComponent,
     NgbModalModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    NgbCollapseModule,
+    FormsModule
     
 ],
   providers: [],
