@@ -33,14 +33,14 @@ export class ProjectsService {
       return project;
   }
 
-  GetProjectsByFilter(filterTags: Tag[]){
+  GetProjectsByFilter(filterTags?: Tag[]) {
     let filteredProjects: Project[] = [];
 
     this.projects.forEach(function (project){
       let foundAll = true;
 
-      filterTags.forEach( function (filterTags) {
-        if (project.tags.includes(filterTags) == false){
+      filterTags?.forEach( function (filterTag) {
+        if (project.tags.includes(filterTag) == false){
           foundAll = false;
         }
           

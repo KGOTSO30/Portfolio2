@@ -11,8 +11,10 @@ import { ProjectsService } from '../_services/projects.service';
 })
 export class PortfolioComponent implements OnInit{
   
-  projects = []  as Project[];
+  projects = {}  as Project[];
+ 
   
+  projectq = {}  as [];
 
   isCollapsed: boolean = true;
 
@@ -33,8 +35,9 @@ export class PortfolioComponent implements OnInit{
   }
 
   Filter(){
+   
     let filterTags: Tag[] = [];
-
+    
     if (this.typescript){
       filterTags.push(Tag.TYPESCRIPT);
     }
@@ -48,10 +51,9 @@ export class PortfolioComponent implements OnInit{
     }else {
       this.filtering = false;
     }
-    let array: Project[] = [];
-    array = []  as Project[];
-    array = this.projectService.GetProjectsByFilter(filterTags);
-    this.projects = array;
+  
+    this.projects = this.projectService.GetProjectsByFilter(filterTags);
+    
    
   }
 
