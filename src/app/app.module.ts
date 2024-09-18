@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
-import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionBody, NgbAccordionModule, NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCardComponent } from "./project-card/project-card.component";
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import {ModalModule} from 'ngx-bootstrap/modal';
@@ -37,6 +37,8 @@ import { FormsModule } from '@angular/forms';
     NgbModalModule,
     NgbCarouselModule,
     NgbCollapseModule,
+    NgbAccordionBody,
+    
     FormsModule
     
 ],

@@ -11,10 +11,12 @@ import { ProjectsService } from '../_services/projects.service';
 })
 export class PortfolioComponent implements OnInit{
   
-  projects = {}  as Project[];
+  projects: Project[] = [];
  
   
-  projectq = {}  as [];
+ // projectq: any ={} = this.projects;
+
+
 
   isCollapsed: boolean = true;
 
@@ -34,9 +36,16 @@ export class PortfolioComponent implements OnInit{
     this.projects = this.projectService.GetProjects();
   }
 
+   
+
+
+  GetProjects(){
+
+  }
   Filter(){
    
-    let filterTags: Tag[] = [];
+   
+   let filterTags: Tag[] = [];
     
     if (this.typescript){
       filterTags.push(Tag.TYPESCRIPT);
@@ -51,9 +60,9 @@ export class PortfolioComponent implements OnInit{
     }else {
       this.filtering = false;
     }
-  
-    this.projects = this.projectService.GetProjectsByFilter(filterTags);
-    
+   // let filteredProjects : Project [] = this.projectService.GetProjectsByFilter(filterTags);
+   // filteredProjects = 
+   // const filteredPs = this.projects.filter(x => filterTags.find(y => y.color === x.id))
    
   }
 
@@ -63,5 +72,6 @@ export class PortfolioComponent implements OnInit{
     this.filtering = false;
 
     this.projects = this.projectService.GetProjects();
+   // this.projects = this.projectService.GetProjectsByFilter();
   }
 }

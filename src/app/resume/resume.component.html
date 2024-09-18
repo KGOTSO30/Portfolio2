@@ -1,1 +1,141 @@
-<p>resume work!</p>
+<div class="container text-center">
+    <button (click)= "DownloadFile()" class="btn btn-primary mb-5 shadow border">Download PDF Resume</button>
+
+<div class="pb-2">
+
+    <div ngbAccordion class="shadow">
+      
+
+        <div ngbAccordionItem="third" #third="ngbAccordionItem" [class.disabled]="third.disabled">
+            <div ngbAccordionHeader class="accordion-button card-header">
+                <button ngbAccordionToggle [disabled]="third.disabled" class="p-0 btn btn-link container-fluid text-center ps-0">
+                    Work Experience
+                </button>
+                @if (third.disabled) {
+                    <p class="text-muted m-0 small">[I'm&nbsp;disabled]</p>
+                }
+            </div>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        Content for Work Experience
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                        butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                        haven't heard of them accusamus labore sustainable VHS.
+                    </ng-template>
+                </div>
+            </div>
+            </div>
+       
+          <div ngbAccordionItem="education" #education="ngbAccordionItem" [class.disabled]="education.disabled" >
+            <div ngbAccordionHeader class="accordion-button card-header">
+                <button ngbAccordionToggle [disabled]="education.disabled" class="p-0 btn btn-link   container-fluid text-center ps-0">
+                    Education
+                </button>
+                @if (education.disabled) {
+                    <p class="text-muted m-0 small">[I'm&nbsp;disabled]</p>
+                }
+            </div>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                       <div style="text-align: left;">
+                        <h2 class="mb-0">Bachelor of Science in Computer Science and Information Systems</h2>
+                        <h3 class="text-primary">University of the Witswatersrand</h3>
+                        <ul>
+                            <li>Graduated from Wits University in March 2024</li>
+                        </ul>
+
+                       </div>
+                    </ng-template>
+                </div>
+            </div>
+            </div>
+
+            <!--  BREAK HERE -->
+            <div ngbAccordionItem="certification" #certification="ngbAccordionItem" [class.disabled]="certification.disabled">
+                <div ngbAccordionHeader class="accordion-button card-header">
+                    <button ngbAccordionToggle [disabled]="certification.disabled" class="p-0  btn btn-link container-fluid text-center ps-0">
+                        Certifications
+                    </button>
+                    @if (certification.disabled) {
+                        <p class="text-muted m-0 small">[I'm&nbsp;disabled]</p>
+                    }
+                </div>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            <div style="text-align: left;">
+                                <h3>Adobe Illustrator</h3>
+                                 <ul>
+                                    <li>Obtained December 2024</li>
+                                    <li>Link or certification ID</li>
+                                </ul>
+        
+                               </div> 
+                            </ng-template>
+                    </div>
+                </div>
+                </div>
+
+                  <!--  BREAK HERE -->
+            <div ngbAccordionItem="skill" #skill="ngbAccordionItem" [class.disabled]="skill.disabled">
+                <div ngbAccordionHeader class="accordion-button card-header">
+                    <button ngbAccordionToggle [disabled]="skill.disabled" class="p-0 btn btn-link container-fluid text-center ps-0">
+                        Skills
+                    </button>
+                    @if (skill.disabled) {
+                        <p class="text-muted m-0 small">[I'm&nbsp;disabled]</p>
+                    }
+                </div>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            
+                        <div class="row" style="text-align: left;">
+                            <div class="col">
+                                <h3>Programming Languages:</h3>
+                                <ul>
+                                    <li>TypeScript</li>
+                                    <li>C#</li>
+                                    <li>C++</li>
+                                    <li>Java</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <h3>Frameworks:</h3>
+                                <ul>
+                                    <li>Angular</li>
+                                    <li>ASP.NET</li>
+                                    <li>Node.JS</li>
+                                   
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <h3>Other Skills:</h3>
+                                <ul>
+                                    <li>Agile development</li>
+                                    <li>Source Control via Git</li>
+                                    <li>UX Research</li>
+                                   
+                                </ul>
+                            </div>
+
+                        </div>
+                        </ng-template>
+                    </div>
+                </div>
+                </div>
+    
+       
+    </div>
+    
+   
+</div>
+     
+</div>
